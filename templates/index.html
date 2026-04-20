@@ -24,7 +24,25 @@
     </div>
   </nav>
 
-  <div class="app-container">
+  <div class="main-wrapper">
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <button class="sidebar-btn active" title="Dashboard" id="side-dashboard">
+        🏠
+        <span class="tooltip">Dashboard</span>
+      </button>
+      <button class="sidebar-btn" title="Known Error Database" id="side-kedb">
+        📚
+        <span class="tooltip">KEDB</span>
+      </button>
+      <div style="flex:1"></div>
+      <button class="sidebar-btn" title="Settings" style="opacity:0.5;cursor:not-allowed">
+        ⚙️
+        <span class="tooltip">Settings</span>
+      </button>
+    </aside>
+
+    <div class="app-container">
 
     <!-- ── Tabs ── -->
     <div class="tabs">
@@ -309,7 +327,8 @@ Example: Build a real-time food delivery app with customer tracking, restaurant 
       </div>
     </div>
 
-  </div><!-- /app-container -->
+    </div><!-- /app-container -->
+  </div><!-- /main-wrapper -->
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="/static/jspdf.umd.min.js" onerror="document.write('<script src=\'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js\'><\/script>')"></script>

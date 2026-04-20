@@ -69,7 +69,26 @@ const historyList    = document.getElementById("history-list");
   setupTabs();
   setupRoleSearch();
   loadHistory();
+  setupSidebar();
 })();
+
+// ──────────────────────────────────────────────
+// Sidebar Functionality
+// ──────────────────────────────────────────────
+function setupSidebar() {
+  const dashBtn = document.getElementById("side-dashboard");
+  const kedbBtn = document.getElementById("side-kedb");
+
+  dashBtn.addEventListener("click", () => {
+    dashBtn.classList.add("active");
+    kedbBtn.classList.remove("active");
+    switchTab("tab-new");
+  });
+
+  kedbBtn.addEventListener("click", () => {
+    window.open("https://assign-iq.vercel.app/", "_blank");
+  });
+}
 
 // ──────────────────────────────────────────────
 // Role Search
